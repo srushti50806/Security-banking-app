@@ -1,0 +1,22 @@
+{
+  "name": "demo_bank",
+  "version": "1.0.0",
+  "description": "Demo banking application with JWT auth and GraphShield login security checks.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "dotenv": "^17.4.0",
+    "express": "^5.2.1",
+    "jsonwebtoken": "^9.0.3",
+    "mongoose": "^9.4.1",
+    "uuid": "^13.0.0"
+  }
+}

@@ -1,0 +1,58 @@
+services:
+  mongodb:
+    image: mongo:latest
+    container_name: graphshield_mongodb
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data:/data/db
+    networks:
+      - graphshield_net
+
+  redis:
+    image: redis:alpine
+    container_name: graphshield_redis
+    ports:
+      - "6379:6379"
+    networks:
+      - graphshield_net
+
+  neo4j:
+    image: neo4j:5.16
+    container_name: graphshield_neo4j
+    environment:
+      - NEO4J_AUTH=neo4j/Skh@23092005
+      - NEO4J_PLUGINS=["apoc"]
+    ports:
+      - "7474:7474"
+      - "7687:7687"
+    volumes:
+      - neo4j_data:/data
+    networks:
+      - graphshield_net
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: graphshield_backend
+    ports:
+      - "5000:5000"
+    environment:
+      - MONGO_URI=mongodb://mongodb:27017/
+      - REDIS_HOST=redis
+      - NEO4J_URI=bolt://neo4j:7687
+    depends_on:
+      - mongodb
+      - redis
+      - neo4j
+    networks:
+      - graphshield_net
+
+networks:
+  graphshield_net:
+    driver: bridge
+
+volumes:
+  mongo_data:
+  neo4j_data:

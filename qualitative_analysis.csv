@@ -1,0 +1,21 @@
+user_id,bank_name,device_id,ip_address,timestamp,ml_score,graph_score,risk_score,decision,failed_attempts,ip_change_count,request_interval,is_new_device,behavior_change_detected,graph_pattern_detected,scenario,reason
+alice_smith,,macbook_alice,198.51.100.42,1780804378.141877,0.7126924613750198,0.0,0.3563462306875099,ALLOW,0,1,,YES,NO,NO,NORMAL,New device detected but within normal thresholds
+bob_attacker,,unknown_linux_client,203.0.113.88,1780804380.14794,0.7126924613750198,0.0,0.3563462306875099,ALLOW,0,1,,YES,NO,NO,NORMAL,New device detected but within normal thresholds
+bob_attacker,,unknown_linux_client,203.0.113.88,1780804384.162529,0.7126924613750198,0.0,0.3563462306875099,ALLOW,0,1,0.0,NO,YES,NO,RAPID_ATTEMPT,High frequency login attempts observed
+user_compromised_1,,shared_botnet_gateway_99,192.0.2.1,1780804388.174587,0.7126924613750198,0.0,0.3563462306875099,ALLOW,0,1,,YES,NO,NO,NORMAL,New device detected but within normal thresholds
+user_compromised_2,,shared_botnet_gateway_99,192.0.2.1,1780804392.187618,0.7126924613750198,0.0,0.3563462306875099,ALLOW,0,1,,YES,NO,YES,DEVICE_REUSE,Device used across multiple users
+user_compromised_3,,shared_botnet_gateway_99,192.0.2.1,1780804396.202712,0.7126924613750198,0.4,0.55634623068751,BLOCK,0,1,,YES,NO,YES,DEVICE_REUSE,Device used across multiple users
+vpn_user_joe,,joe_android_phone,185.228.168.10,1780804400.215464,0.7126924613750198,0.0,0.3563462306875099,ALLOW,0,1,,YES,NO,NO,NORMAL,New device detected but within normal thresholds
+vpn_user_joe,,joe_android_phone,185.228.169.15,1780804404.227531,0.7126924613750198,0.0,0.3563462306875099,ALLOW,0,2,0.0,NO,YES,YES,IP_ROTATION,Multiple IPs detected for same device
+vpn_user_joe,,joe_android_phone,185.228.170.20,1780804408.238982,0.7126924613750198,0.0,0.3563462306875099,ALLOW,0,3,0.0,NO,YES,YES,IP_ROTATION,Multiple IPs detected for same device
+vpn_user_joe,,joe_android_phone,185.228.171.25,1780804412.250403,0.7126924613750198,0.3,0.50634623068751,BLOCK,0,4,0.0,NO,YES,YES,IP_ROTATION,Multiple IPs detected for same device
+user@gmbank.com,,compromised_browser_agent,185.228.180.1,1780806425.05794,0.7126924613750198,0.0,0.3563462306875099,ALLOW,0,1,,YES,NO,NO,NORMAL,New device detected but within normal thresholds
+user@gmbank.com,,compromised_browser_agent,185.228.180.2,1780806426.566433,0.7126924613750198,0.0,0.3563462306875099,ALLOW,0,2,0.0,NO,YES,YES,IP_ROTATION,Multiple IPs detected for same device
+user@gmbank.com,,compromised_browser_agent,185.228.180.3,1780806428.076551,0.7126924613750198,0.0,0.3563462306875099,ALLOW,0,3,0.0,NO,YES,YES,IP_ROTATION,Multiple IPs detected for same device
+user@gmbank.com,,compromised_browser_agent,185.228.180.4,1780806429.587467,0.7126924613750198,0.3,0.50634623068751,BLOCK,0,4,0.0,NO,YES,YES,IP_ROTATION,Multiple IPs detected for same device
+6a255a0dd1957dd9c2856a44,,74ecc6a9cbd4170faddc4d30c429c4b3a8d0f200edc3472a1ddf1282ea06b7ad,::1,1780812982.329432,0.7126924613750198,0.0,0.3563462306875099,ALLOW,0,1,,YES,NO,NO,NORMAL,New device detected but within normal thresholds
+6a255b81d1957dd9c2856a45,,74ecc6a9cbd4170faddc4d30c429c4b3a8d0f200edc3472a1ddf1282ea06b7ad,::1,1780813354.421,0.7126924613750198,0.0,0.3563462306875099,ALLOW,0,1,,YES,NO,YES,DEVICE_REUSE,Device used across multiple users
+testuser_1780833153@gmail.com,,compromised_botnet_device,185.228.200.1,1780813665.371273,0.7126924613750198,0.0,0.3563462306875099,ALLOW,0,1,,YES,NO,NO,NORMAL,New device detected but within normal thresholds
+testuser_1780833153@gmail.com,,compromised_botnet_device,185.228.200.2,1780813666.877992,0.7126924613750198,0.0,0.3563462306875099,ALLOW,0,2,0.0,NO,YES,YES,IP_ROTATION,Multiple IPs detected for same device
+testuser_1780833153@gmail.com,,compromised_botnet_device,185.228.200.3,1780813668.393799,0.7126924613750198,0.0,0.3563462306875099,ALLOW,0,3,0.0,NO,YES,YES,IP_ROTATION,Multiple IPs detected for same device
+testuser_1780833153@gmail.com,,compromised_botnet_device,185.228.200.4,1780813669.909447,0.7126924613750198,0.3,0.50634623068751,BLOCK,0,4,0.0,NO,YES,YES,IP_ROTATION,Multiple IPs detected for same device

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Demo Bank</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main class="auth-shell">
+      <section class="auth-card">
+        <div class="brand-block">
+          <p class="eyebrow">Demo Bank</p>
+          <h1>Secure account access</h1>
+          <p class="subcopy">
+            Register a user, sign in with a real password check, and pass the
+            session through GraphShield before access is granted.
+          </p>
+        </div>
+
+        <div id="status" class="status" aria-live="polite"></div>
+
+        <div class="forms">
+          <form id="registerForm" class="panel">
+            <h2>Create account</h2>
+
+            <label for="registerUsername">Username</label>
+            <input id="registerUsername" name="username" type="text" required minlength="3" />
+
+            <label for="registerEmail">Email</label>
+            <input id="registerEmail" name="email" type="email" required />
+
+            <label for="registerPassword">Password</label>
+            <input
+              id="registerPassword"
+              name="password"
+              type="password"
+              required
+              minlength="8"
+            />
+
+            <button type="submit">Register</button>
+          </form>
+
+          <form id="loginForm" class="panel">
+            <h2>Login</h2>
+
+            <label for="loginEmail">Email</label>
+            <input id="loginEmail" name="email" type="email" required />
+
+            <label for="loginPassword">Password</label>
+            <input id="loginPassword" name="password" type="password" required />
+
+            <label for="bankName">Bank Name</label>
+            <input id="bankName" name="bank_name" type="text" placeholder="Enter Full Bank Name" />
+
+            <button type="submit">Login</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <script src="/app.js"></script>
+  </body>
+</html>
+
